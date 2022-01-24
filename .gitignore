@@ -1,0 +1,25 @@
+# Operating System Files
+
+*.DS_Store
+Thumbs.db
+*~
+.#*
+#*
+*#
+
+# IDE Project Files #
+
+**/*.iml
+**/*.idea
+**/.settings/
+**/target/
+**/*.m2
+**/*.project
+/build/
+**/*.classpath
+**/*.scannerwork
+
+#Helm chart package file
+helm-charts/*.tgz
+
+! kube-scripts/**
