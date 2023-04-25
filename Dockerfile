@@ -1,5 +1,5 @@
 ### BUILD image
-FROM alpine:3.15.0
+FROM alpine:3.17.3
 
 # Update packages
 RUN apk update && \
@@ -13,7 +13,7 @@ ONBUILD RUN apk update && \
     sync
 
 # Install OpenJDK 17
-RUN apk --no-cache add openjdk17 --repository=https://dl-cdn.alpinelinux.org/alpine/v3.15/community
+RUN apk --no-cache add openjdk17 --repository=https://dl-cdn.alpinelinux.org/alpine/v3.17/community
 ENV HOME /root
 ENV LANG en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
