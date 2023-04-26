@@ -15,8 +15,6 @@ steps:
   commands:
   - /usr/local/bin/wait
   - docker build -t ileap-java17:$${DRONE_COMMIT_SHA} .
-  environment:
-    
   when:
     event:
     - push
