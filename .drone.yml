@@ -13,8 +13,10 @@ steps:
   pull: if-not-exists
   image: 340268328991.dkr.ecr.eu-west-2.amazonaws.com/acp/dind
   commands:
-  - n=0; while [ "$n" -lt 60 ] && [ ! docker stats --no-stream ]; do n=$(( n + 1 )); sleep 1; done
+  - /usr/local/bin/wait
   - docker build -t ileap-java17:$${DRONE_COMMIT_SHA} .
+  environment:
+    
   when:
     event:
     - push
