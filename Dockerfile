@@ -1,5 +1,5 @@
 ### BUILD image
-FROM alpine:3.17.3
+FROM alpine:3.18
 
 # Update packages
 RUN apk update && \
