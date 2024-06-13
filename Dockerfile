@@ -3,12 +3,12 @@ FROM alpine:3.18
 
 # Update packages
 RUN apk update && \
-    apk add --upgrade apk-tools && \
+    apk add --upgrade apk-tools libstdc++ && \
     apk upgrade --available && \
     sync
 
 ONBUILD RUN apk update && \
-    apk add --upgrade apk-tools && \
+    apk add --upgrade apk-tools libstdc++ && \
     apk upgrade --available --ignore openjdk17 openjdk17-jmods openjdk17-demos openjdk17-doc java-common java-cacerts openjdk17-jre-headless openjdk17-jre openjdk17-jdk && \
     sync
 
